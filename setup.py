@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     # Application name:
-    name="RM Control",
+    name="RMControl",
 
     # Version number (initial):
     version="1.0.0",
