@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>RM Control</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='app.css')}}">
+	<link rel="stylesheet" href="https://file.myfontastic.com/dZwVd35qfMaPngzfXq8ozS/icons.css">
+</head>
+<body>
+	<div id="commands" v-cloak>
+		<ul>
+			<li v-for="(command, index) in commands" @click.prevent="fireCommand(command)">
+				{% raw %}{{command.name}}{% endraw %}
+				<div class="options">
+					<a class="icon-pencil" @click.prevent.stop="editCommand(index)"></a>
+					<a class="icon-trash" @click.prevent.stop="deleteCommand(index)"></a>
+				</div>
+			</li>
+			<li class="add">
+				<input type="text" name="name" placeholder="New command name" v-model="command.name">
+				<div class="options">
+					<a class="icon-plus" @click.prevent="addCommand"></a>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.0.3/vue-resource.min.js"></script>
+	<script src="{{url_for('static', filename='app.js')}}"></script>
+</body>
+</html>

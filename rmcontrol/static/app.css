@@ -1,0 +1,77 @@
+[v-cloak] {
+    display: none;
+}
+
+body {
+    font-weight: bold;
+    background-color: #f0f0f0;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    cursor: pointer;
+    font-size: 18px;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    border: none;
+    outline: none;
+    border-bottom: 2px dashed #ddd;
+    transition: 0.1s all;
+    font-size: 18px;
+    width: 80%;
+}
+
+input:focus {
+    border-bottom: 2px dashed #000;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    display: block;
+    box-shadow: 0 0 3px 3px #eee;
+}
+
+li {
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+li:last-of-type {
+    border-bottom: none;
+}
+
+span {
+    font-size: 125%;
+}
+
+.options {
+    float: right;
+    font-size: 125%;
+}
+
+.options a {
+    color: #bfbfbf;
+    transition: 0.1s all;
+    margin-left: 5px;
+}
+
+.options a:hover,
+.options a:active {
+    color: #999;
+}
+
+@media (min-width: 768px) {
+    #commands {
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

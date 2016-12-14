@@ -1,0 +1,3 @@
+recursive-include rmcontrol/templates *
+recursive-include rmcontrol/static *
+recursive-include rmcontrol/database *
