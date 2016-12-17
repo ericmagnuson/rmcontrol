@@ -1,6 +1,11 @@
 ## RM Control
 RM Control is an app to control an RM2 by BroadLink.  It allows users to learn IR and RF codes, store them, and fire them.
 
+### Installation
+1. `python setup.py install`
+2. `export FLASK_APP=rmcontrol; python -m flask initdb`
+3. `python run.py`
+
 ### Components
 1. vue.js front-end
 2. python back-end
