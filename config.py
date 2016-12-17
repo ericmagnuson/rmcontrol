@@ -7,4 +7,4 @@ CSRF_SESSION_KEY = 'secret'
 DATABASE = 'database/rmcontrol.db',
 SECRET_KEY = 'YOUR_KEY_GOES_HERE_abcdefghijklm',
 USERNAME = 'admin',
-PASSWORD = 'default'
+PASSWORD = 'default',
