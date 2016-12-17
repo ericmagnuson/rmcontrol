@@ -1,0 +1,60 @@
+{
+	"bridge": {
+		"name": "RM Control",
+		"username": "CC:22:3D:E3:CE:31",
+		"port": "51826",
+		"pin": "123-45-678"
+	},
+	"description": "This is an example configuration file for using Homebridge with RM Control",
+	"accessories": [
+		{
+			"accessory": "HttpMulti",
+			"name": "Couch light",
+			"http_method": "POST",
+			"on_url": "http://192.168.1.104:5000/commands/1%20On",
+			"off_url": "http://192.168.1.104:5000/commands/1%20Off",
+			"deviceType": "light"
+		},
+		{
+			"accessory": "HttpMulti",
+			"name": "Desk light",
+			"http_method": "POST",
+			"on_url": "http://192.168.1.104:5000/commands/2%20On",
+			"off_url": "http://192.168.1.104:5000/commands/2%20Off",
+			"deviceType": "light"
+		},
+		{
+			"accessory": "HttpMulti",
+			"name": "Tall lamp",
+			"http_method": "POST",
+			"on_url": "http://192.168.1.104:5000/commands/3%20On",
+			"off_url": "http://192.168.1.104:5000/commands/3%20Off",
+			"deviceType": "light"
+		},
+		{
+			"accessory": "HttpMulti",
+			"name": "Bed lamp",
+			"http_method": "POST",
+			"on_url": "http://192.168.1.104:5000/commands/4%20On",
+			"off_url": "http://192.168.1.104:5000/commands/4%20Off",
+			"deviceType": "light"
+		},
+		{
+			"accessory": "HttpMulti",
+			"name": "Corner lamp",
+			"http_method": "POST",
+			"on_url": "http://192.168.1.104:5000/commands/5%20On",
+			"off_url": "http://192.168.1.104:5000/commands/5%20Off",
+			"deviceType": "light"
+		},
+		{
+			"accessory": "HttpMulti",
+			"name": "Screen",
+			"http_method": "POST",
+			"down_url": "http://192.168.1.104:5000/commands/Screen%20Down",
+			"up_url": "http://192.168.1.104:5000/commands/Screen%20Up",
+			"deviceType": "light"
+		}
+	],
+	"platforms": []
+}
