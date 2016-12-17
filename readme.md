@@ -31,19 +31,25 @@ RM Control can be interacted with by visiting the included web interface found a
 Coming soon.
 
 ### API Documentation 
+
 `GET /`
+
 Shows all commands.
 
 `POST / {name: <name>}`
+
 Listens for a command from the RM2, and if a command is received, it will be saved with the given name.
 
 `POST /<name>`
+
 Fire the given command.
 
 `PATCH /<name> {name: <name?>, code: <code?>}`
+
 Edit the requested command by passing in a new name and/or code.
 
 `DELETE /<name>`
+
 Delete the given command.
 
 ### To Do
