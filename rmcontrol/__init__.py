@@ -14,17 +14,9 @@ from flask import Flask, request, Response, render_template, url_for, g
 
 app = Flask(__name__)
 
-app.config.update(dict(
-    DATABASE = os.path.join(app.root_path, 'rmcontrol.db'),
-    DEBUG = True,
-    SECRET_KEY = 'mPkDA1DnMJ25kcMncqdlAJG3mo9txpdX',
-    USERNAME = 'admin',
-    PASSWORD = 'default'
-))
+app.config.from_object(__name__)
 
-app.config.from_envvar('FLASKR_SETTINGS', silent=True)
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(debug=True)
 
 
@@ -58,7 +50,7 @@ def initdb_command():
 Connects to the specific database.
 """
 def connect_db():
-    db = sqlite3.connect(app.config['DATABASE'])
+    db = sqlite3.connect(os.path.join(app.root_path, 'database/rmcontrol.db'))
     db.text_factory = str
     db.row_factory = sqlite3.Row
     return db
@@ -98,7 +90,7 @@ def get_device():
 
 ###############################################################################
 # Routes                                                                      #
-#############################################################################
+###############################################################################
 
 """
 Show web interface.
@@ -114,6 +106,9 @@ Get all commands.
 """
 @app.route('/commands')
 def list():
+    if os.stat(os.path.join(app.root_path, 'database/rmcontrol.db')).st_size == 0:
+        init_db()
+
     db = get_db()
     cursor = db.execute('select name from commands order by name asc')
 
