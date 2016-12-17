@@ -33,7 +33,9 @@ RM Control can be interacted with by visiting the included web interface found a
 9. Using Homebridge-HttpMulti, configure Homebridge to send commands to the RM Control API. See `config.json.sample` for an example.
 
 ### Supervisor Setup
-Coming soon.
+1. `sudo apt-get install supervisor`
+2. In `/etc/supervisor/conf.d/`, add two configuration files, `rmcontrol.conf` and `homebridge.conf`. See sample files for help.
+3. `sudo service supervisor reload`
 
 ### API Documentation
 

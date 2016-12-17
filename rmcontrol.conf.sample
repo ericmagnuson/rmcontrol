@@ -1,0 +1,13 @@
+[program:rmcontrol]
+directory = /home/rmcontrol/rmcontrol
+user = rmcontrol
+command = python run.py
+autostart = true
+autorestart = true
+
+stdout_logfile = /var/log/rmcontrol-stdout.log
+stdout_logfile_maxbytes = 10MB
+stdout_logfile_backups = 5
+stderr_logfile = /var/log/rmcontrol-stderr.log
+stderr_logfile_maxbytes = 10MB
+stderr_logfile_backups = 5
