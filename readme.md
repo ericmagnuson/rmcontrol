@@ -30,7 +30,7 @@ RM Control can be interacted with by visiting the included web interface found a
 ### Supervisor Setup
 Coming soon.
 
-### API Documentation 
+### API Documentation
 
 `GET /`
 
@@ -53,4 +53,6 @@ Edit the requested command by passing in a new name and/or code.
 Delete the given command.
 
 ### To Do
+- Add progress icon when learning.
+- Finish edit capability.
 - Gracefully handle errors if RM2 cannot be found.
