@@ -35,7 +35,8 @@ RM Control can be interacted with by visiting the included web interface found a
 ### Supervisor Setup
 1. `sudo apt-get install supervisor`
 2. In `/etc/supervisor/conf.d/`, add two configuration files, `rmcontrol.conf` and `homebridge.conf`. See sample files for help.
-3. `sudo service supervisor reload`
+3. `sudo systemctl enable supervisor`
+4. `sudo systemctl start supervisor`
 
 ### API Documentation
 
