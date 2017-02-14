@@ -42,6 +42,7 @@ li {
     display: block;
     padding: 15px;
     border-bottom: 1px solid #f5f5f5;
+    transition: 0.1s all ease-in-out;
 }
 
 li:last-of-type {
@@ -55,8 +56,19 @@ li:focus {
 
 li:active {
     background-color: #f4f4f4;
-    box-shadow: rgba(42, 175, 175, 0.5) 0 0 10px inset;
+
+    -webkit-animation: btn-color 1s forwards ease-out;
+    -moz-animation: btn-color 1s forwards ease-out;
+    -ms-animation: btn-color 1s forwards ease-out;
+    -o-animation: btn-color 1s forwards ease-out;
+    animation: btn-color 1s forwards ease-out;
 }
+
+@-webkit-keyframes btn-color { 0% { -webkit-box-shadow: rgba(42, 175, 175, 0.5) 0 0 10px inset; } 100% { -webkit-box-shadow: rgba(42, 175, 175, 0.5) 0 0 0 inset; } }
+@-moz-keyframes    btn-color { 0% { -moz-box-shadow: rgba(42, 175, 175, 0.5) 0 0 10px inset; } 100% { -moz-box-shadow: rgba(42, 175, 175, 0.5) 0 0 0 inset; } }
+@-ms-keyframes     btn-color { 0% { -ms-box-shadow: rgba(42, 175, 175, 0.5) 0 0 10px inset; } 100% { -ms-box-shadow: rgba(42, 175, 175, 0.5) 0 0 0 inset; } }
+@-o-keyframes      btn-color { 0% { -o-box-shadow: rgba(42, 175, 175, 0.5) 0 0 10px inset; } 100% { -o-box-shadow: rgba(42, 175, 175, 0.5) 0 0 0 inset; } }
+@keyframes         btn-color { 0% { box-shadow: rgba(42, 175, 175, 0.5) 0 0 10px inset; } 100% { box-shadow: rgba(42, 175, 175, 0.5) 0 0 0 inset; } }
 
 span {
     font-size: 125%;
