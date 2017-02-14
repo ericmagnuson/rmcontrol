@@ -42,7 +42,6 @@ li {
     display: block;
     padding: 15px;
     border-bottom: 1px solid #f5f5f5;
-    transition: 0.1s all ease-in-out;
 }
 
 li:last-of-type {
@@ -57,11 +56,11 @@ li:focus {
 li:active {
     background-color: #f4f4f4;
 
-    -webkit-animation: btn-color 0.25s forwards ease-out;
-    -moz-animation: btn-color 0.25s forwards ease-out;
-    -ms-animation: btn-color 0.25s forwards ease-out;
-    -o-animation: btn-color 0.25s forwards ease-out;
-    animation: btn-color 0.25s forwards ease-out;
+    -webkit-animation: btn-color 0.5s ease-out;
+    -moz-animation: btn-color 0.5s ease-out;
+    -ms-animation: btn-color 0.5s ease-out;
+    -o-animation: btn-color 0.5s ease-out;
+    animation: btn-color 0.5s ease-out;
 }
 
 @-webkit-keyframes btn-color { 0% { background-color: #e5ffe5; } 100% { background-color: #fff; } }
