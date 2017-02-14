@@ -5,6 +5,8 @@ command = homebridge
 autostart = true
 autorestart = true
 
+environment=HOME="/home/rmcontrol"
+
 stdout_logfile = /var/log/homebridge-stdout.log
 stdout_logfile_maxbytes = 10MB
 stdout_logfile_backups = 5
