@@ -48,6 +48,16 @@ li:last-of-type {
     border-bottom: none;
 }
 
+li:hover,
+li:focus {
+    background-color: #f4f4f4;
+}
+
+li:active {
+    background-color: #f4f4f4;
+    box-shadow: rgba(42, 175, 175, 0.5) 0 0 10px inset;
+}
+
 span {
     font-size: 125%;
 }
