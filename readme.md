@@ -11,7 +11,7 @@ RM Control is an app to control an RM2 by BroadLink.  It allows users to learn I
 2. `libavahi-compat-libdnssd-dev`
 3. `nodejs` (>6.0.0)
 4. `node-gyp`
-5. `python` (2.7)
+5. `python` (2.7) and `python-dev`
 
 ### Installation
 1. `git clone https://github.com/ericmagnuson/rmcontrol.git && cd rmcontrol`
@@ -25,7 +25,7 @@ RM Control can be interacted with by visiting the included web interface found a
 1. `curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh`
 2. `sudo bash nodesource_setup.sh`
 3. `sudo apt update`
-4. `sudo apt install build-essential git libavahi-compat-libdnssd-dev nodejs node-gyp python-setuptools python-pip`
+4. `sudo apt install build-essential git libavahi-compat-libdnssd-dev nodejs node-gyp python-setuptools python-pip python-dev`
 5. `pip install pycrypto`
 6. `sudo reboot now`
 7. `sudo npm install -g --unsafe-perm request homebridge homebridge-httpmulti`
